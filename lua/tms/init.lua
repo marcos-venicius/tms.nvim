@@ -29,6 +29,11 @@ function M.setup(themes)
   end
 
   local theme_index = get_current_theme()
+
+  if theme_index > #themes then
+    theme_index = 1
+  end
+
   local theme = themes[theme_index]
   local next_theme = theme_index + 1
 
